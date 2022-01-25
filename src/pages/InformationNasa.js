@@ -13,9 +13,7 @@ export const InformationNasa = () => {
             const res = await fetch(
                 `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
             );
-            // const res = await fetch(
-            //     `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${apiKey}`
-            // );
+
             const data = await res.json();
             console.log(data);
             setPhotoData(data);
@@ -40,17 +38,6 @@ export const InformationNasa = () => {
                 />
             )}
             </div>
-
-        {/* {photoData.photos && (
-            <ul className="animes-list">
-              {photoData.photos.map((photo) => (
-                <li key={photo.id}>
-                    <img src={photo.img_src}/>
-                  <p>{photo.camera.full_name}</p>
-                </li>
-              ))}
-            </ul>
-        )} */}
             
             <div className="description">
                 <h1>{photoData.title}</h1>
