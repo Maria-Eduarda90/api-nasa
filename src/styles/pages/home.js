@@ -4,6 +4,7 @@ import myImage from '../../images/2833951.jpg';
 export const BodyImage = styled.div`
     background-image: url(${myImage});
     height: 100vh;
+    overflow: hidden;
 
     .container {
         position: relative;
